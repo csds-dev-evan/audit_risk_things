@@ -1,0 +1,446 @@
+Initial Q's:
+Inhouse Core and Online Banking?
+What vendors do you general employ and what is their role?
+How many hosts on your network?
+Where is the data center hosted?
+
+
+
+---------------------------------------------------------------------------------------------------------
+Physical Access::::::::::::
+
+	Do you have security guards on site?
+
+	Alarm systems?
+
+	Who has access to the building after hours?
+
+	Is access to non-member areas based on division? 
+
+	Visitor logs?
+
+	Visitor badges?
+
+	Clean Desk Reviews?
+
+	Escort policy for visitors?
+		Explain the Policy.
+	
+	Check badges with government issued ID?
+	
+	Are cameras actively monitored?
+	
+	Are the alarms, camera systems, and other physical access controls tested?
+
+---------------------------------------------------------------------------------------------------------	
+DataCenters Access:::::::::::::::::::
+
+Who has access?
+
+UPS in data center?
+
+Camera in the data center?
+
+All servers in cabinets can be locked?
+
+Security cameras
+	In data center?
+	How long do you retain video retention for?	
+		90 Days?
+	
+Access logs for data center?
+
+---------------------------------------------------------------------------------------------------------
+
+Environmental::::::::::::::::::::::::
+	HVAC systems?
+	Fire Suppression / Fire Extinguisher ? is it an abc fire extinguisher?
+	Flood Detection?
+	UPS?
+	Generators?
+	
+	
+	
+---------------------------------------------------------------------------------------------------------	
+Data Destruction Procedures::::::::::::::
+
+What type of sanitation procedures are performed for old PC's, hardware, and hard drives?
+
+Sample certificate of destruction?
+
+Locked Shred Bins?
+
+Description of procedures ?
+ 
+How often are shred bins emptied?
+	
+What vendor handles this?
+		
+Corresponding forms or process that may correlate for destroying hardware(old access points, endpoints, hard drives, switches, etc..)??
+
+------------------------------------------
+Formally Removing Assets::
+Are they put through a ticketing system??
+Accountability -- Do two people review and is the auditor/security/admin tracked and logged when those are formally removed.
+Certificate of destruction
+
+
+
+--------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------
+Backup Procedures::::::::::::::::::
+
+What data, devices, and configurations are backed up?
+
+How often?
+
+How are the backups stored?
+
+Is the data that's backed up encrypted?
+
+Do you test your backups?
+
+Logical Access:::::
+Describe the connection between branches?
+
+Controlling Routing and Access to Data, Controlling types of communications -- Network Segmentation:::::::::
+Critical devices on separate VLANS??
+Trunking??
+Is ATM on local LAN not segmented??
+Port and traffic filtering?? For instance, do you need to allow access over the VPN for ALL communications, perhaps use ACL's to filter traffic.
+
+
+
+---------------------------------------------------------------------------------------------------------
+Security Testing:::::::::::::::::::::::::
+
+
+Vulnerability Management Program -- procedure, policy
+
+Vulnerability Scanning
+	
+	Program? 
+	
+	Recurrence?
+	
+	What devices are you scanning?
+	
+	How are vulnerabilities that are found handled(who is notified, is there a document to track remediation efforts?) 
+
+SOC testing/Risk Assessments for Core Applications/Online Banking::::::::::::::::::
+
+
+	--Online and mobile 
+		-Do you have two factor authentication
+		-suspicious account monitoring(verifin)
+		--Out of band notifications?(sms or email)
+
+	
+	
+	
+
+---------------------------------------------------------------------------------------------------------
+Protective Technologies:
+Do you use application white-listing? 
+	
+
+------------------------------------------------------------
+
+Monitoring Devices and The Network:::::::::::::::::::::::::::	
+	IPS/IDS?
+		Internal
+		External			
+		
+Capacity monitoring ? -- IE: CPU, Memory, hard drive usage, bandwidth
+--What kinds of tools??
+		-Do you have monitoring outside of your virtualized software.
+		-Do your servers at least have monitoring.
+		
+Integrity monitory ? 
+	-- Tracks firmware changes
+
+
+Escalation Procedures for Incidents:::
+
+Control: DE.AE-5: Define and employ incident alert thresholds to determine appropriate response and escalation procedures.
+Jerrys Response::
+So to put it simply, they need to say under what circumstance they will escalate to convening an incident response team or disaster recovery team or outside bodies.  Some do it by specific type of event (natural disaster, ransomware, etc.), but some do it by the event "severity".  So if by their definitions, the event is a "High" impact or greater, they would call in the response or recovery teams.
+
+
+
+
+
+-------------------------------------------------------------
+	
+DE.CM-5: Implement mechanisms to detect unauthorized mobile code (e.g. HTML, Javascript, PHP, etc.)
+--Web application firewall
+--HIDS
+--Antimalware solution to prevent the follow attacks on web applications:
+	-XSS
+	-SQL Injections
+	-Command Injections
+	-Directory Traversal
+	-Directory Brute-forcing
+	
+Log management:::::::
+		who reviews the logs?
+		Rules? Alerts? Have you manually set rules or thresholds?
+		SIEM Solution?
+		
+
+		
+Patch management?
+		windows? 
+		third party? 
+	
+---------------------------------------------------------------------------------------------------------	
+Least Functionality Principal:::
+critical devices and servers? have they been reduced to only allow services and programs on the system to what it needs?? --This prevents programs from being out of sight, out of mind and not updated. 	
+	
+Do you have any servers/endpoints virtualized:::
+Types of devices?
+Master images? 
+--This reduces cost and is less prone to error
+--Automation and scripts for image deployment and group policy assignment for users, and virtual workstations reduces errors as well
+
+
+---------------------------------------------------------------------------------------------------------		   
+Hardening/baseline configuration procedures:::
+What Devices?
+Do you conduct firewall / switch / or firmware audits?
+Are base images kept?		
+
+
+---------------------------------------------------------------------------------------------------------
+DLP tools?:::::
+Attachment Encryption?
+PII filtering?
+	SS#
+	Account #
+Removable media?
+Remote Wiping for Laptops and Mobile Devices??
+
+
+---------------------------------------------------------------------------------------------------------
+"Quaranteened" computers, endpoints, devices, etc get moved to a seperate part of the network , segregating and mitigating risk until fixed. Typically these environments will have the utilities to patch, update systems, and update antivirus definitions so it can be moved back to the regular network 
+
+
+
+---------------------------------------------------------------------------------------------------------				
+Rogue Devices and Port Security::::::
+Ports disabled?
+Mac Filtering?
+Rogue device detection?
+Wireless Rouge Device Detection?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+Managing Credentials:
+
+Password Requirements (Domain, Core, Online/Mobile)
+	Domain  
+	Complexity
+	Length
+	Reuse
+	Expiration
+	Lockout Policy 
+
+Least Privilege Enforced? (Prevents privilege creep and dormant accounts)
+
+Account Reviews?
+		For Core?
+		For Windows Domain
+
+Provisioning access to new users?
+	process?
+		email?
+		checklist?
+		work order?
+		
+Termination procedures?
+		
+Additional--
+Separate Administrator account for elevated duties?
+When terminating an employee that is in IT do you change admin passwords?
+What is the process for adding new users to the network?
+Password Audits?
+
+
+
+
+---------------------------------------------------------------------------------------------------------	
+Remote Access::::::::::::::::
+Describe process to connect remotely?
+Do you have a remote access policy?
+
+Do you keep an approved VPN user access list?
+
+Do you monitor VPN connections?
+logged?
+
+
+Do you require devices that are connecting to have updated software and antivirus?
+	is this verified before a connection is allowed?
+	
+Do you use two factor authentication for VPN?
+
+Current employee list?? Can I cross reference that with VPN RSA user list and RSA access tokens list?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+External Interfaces::::::::::::::::::::::
+	What type of content is facing publicly?
+	
+	Do you have a WAF on interfaces that face publicly? 
+		
+	Web content filtering?
+	 
+	Do you keep a list of external interfaces? 
+
+
+
+	
+---------------------------------------------------------------------------------------------------------		
+Cybersecurity training and awareness:::::::::::::::::::::::::
+What is in place?
+On-boarding training?
+	End user agreements?
+	Security awareness training?
+
+Newsletters?
+Post info-sec esc things on intranet page?
+Required cybersecurity training?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+Misc:::::::::::::::::::::::::::::::::::::::::::
+Documented approved data flows for the network and systems??
+Hardware/Software Inventory Reports??
+Do you subscribe to threat intelligence fees? -- Example of threat intelligence source(s) - NVD, CERT, FS-ISAC, etc ?
+PR.DS-7: Employ development and testing environment(s) that are separate from the production environment.?
+Voluntary industry contributions?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+PR.IP-3: Define and enforce configuration change control processes for managed systems.::::::::::::::::::::::::::::::::::::::
+INTERVIEW: How does the organization ensure that changes to systems or applications are approved and controlled? 
+DOCUMENTATION: Review the configuration control policies for a description of the approval and control procedures. Review sample configuration change requests. Review sample configuration control approval documents. 
+OBSERVATION: Observe a demonstration of an automated configuration control solution.
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+End User Protections::::::
+Lock screen for inactivity? 15minutes?
+Certificate and Key management ? procedures?
+Do you have templates for different type of roles, like AD templates?
+Is a users initial password randomized?
+Is antivirus teseted?
+do you have antivirus on mobile devices?
+
+---------------------------------------------------------------------------------------------------------
+
+Data Security::::::::::
+Secure protocols, encryption on local network?
+Open/Anonymous Share Drives?
+Open/Anonymous FTP Shares?
+LDAP Enumeration locked down?
+Local Admin Passwords Disabled?
+BIOS Password?
+Disabled removable media?
+	
+---------------------------------------------------------------------------------------------------------
+Vendor Due Diligence?: 
+Do you have vendor management policy's?
+Do you perform risk assessments on vendors? Do you require security testing for them?
+Do you review vendors on a semi-regular basis?
+		Does this review include assigned personnel to the review? Is there a policy associated with this review?
+		Do you keep a running list of vendors?
+		
+
+		
+		
+---------------------------------------------------------------------------------------------------------		
+Defined Responsibilities::::::: IEEEE-- Job Descriptions, End User Agreements, Info-Sec Policy
+Executives?
+Security Personnel?
+Management?
+Privileged Users?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+Tracking/Remediation Efforts/Maintenance and Repair::::
+Do you have a ticketing system?
+	Is it used for 1.Maintenance and repair of assets/systems/software | 2. Access Provisioning | 3.Vulnerability Tracking/Remediation | 4. General IT issues
+	
+
+Framework Documents::::::::::::::::::::::
+
+Disaster Recovery Plan
+	DR Testing?
+		How Often?	
+		
+Breach procedures?
+	Who manages public relations
+	Is there a documented procedure for who is responsible for handling public relations/customer updates/ press releases
+	
+		
+Business Impact Analysis
+	RTO/RPO?
+
+Business Continuity Plan
+
+Prior Risk Assessments, Audits
+
+Incident Response Plan
+	Containment procedures?
+	Mitigation procedures?
+	Forensic procedures?
+	
+Board Reports, Meeting Minutes, Updates to the board/executive team regarding incidents, updates/implementation for protective technologies
+
+Information Security Policy?
+
+Risk Mitigation Tracking Document?
+
+Do you create lessons learned or incident response reports following an incident, breach, testing etc??
+
+ID.GV-3 Establish policies and procedures to enforce disciplinary action for security non-compliance.
+
+Detection alerting and process::::::
+Describe to me the process of detected vulnerabilities?
+Who is notified?
+what type of mitigation, containment, and tracking do you do after discovered?
+Is it put in a ticketing system?
+How is assigning personnel dealt with?
+
+Revision History and Reporting::::::::::
+Do you have an IT steering committee??
+Do you have a board to report too??
+Are reports reviewed??
+Do you have an annual board report or reports to executive members regarding info-sec stuff:
+	Vuln Management/Patch Management
+	New Implementations
+	Breaches
+
+
+---------------------------------------------------------------------------------------------------------	
+10,000000 Feet Questions:
+Where do you think your biggest risk of compromise is?
+What would be most costly to your organization?
+What new protective technologies are you considering?
+If you could improve one thing your info-sec program what would it be?
+
