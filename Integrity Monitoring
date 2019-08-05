@@ -1,0 +1,27 @@
+Integrity checking mechanisms are used to verify software, firmware, and information integrity.
+
+    The above control is based on NIST CSF PR.DS-6. 
+
+    “Implement integrity checking mechanisms to verify software, firmware, and information integrity.”
+
+    I’ll try to demystify this control below.
+
+    PR.DS-6 is derived from the NIST Special Publication 800-53 control “SI-7 (6), SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY”.   It deals with methods to ensure the integrity of data, whether that be binary files, firmware, or transmitted information.  SI-7 cites employing a number of different methodologies to meet these goals depending on the operating environment and specific assets being protected.  This includes, but is not limited to:
+
+1.	Verifying the integrity of software before execution.
+2.	Employ automated tools to notify of any discrepancies during integrity validation.
+3.	System implements cryptographic methods to detect unauthorized changes to software, firmware or data.
+
+    There are probably many examples of these across and organization, include some in existing commercial off the shelf software.   So for an ISA to determine full implementation status for any institution may sound like a tall order.  In cases like these, we try to concentrate on the organization’s “critical” business systems, applications, and tools (core processor, domain controller, critical file or application server, sensitive financial or business data).   We ultimately want to know if they organization has ensured one or more integrity checking mechanisms for their critical assets.  
+
+In practice, this might include, but is not limited to:
+
+                SYSTEMS and SOFTWARE
+1.	Antimalware software configured to check software integrity (digital signature, antimalware signatures) of each executable or binary before allowing it to be run.  (most antimalware products can do this for copied or downloaded files)
+2.	Third party solutions that monitor file integrity and alert of unauthorized changes to system files or application files.  (Examples of file integrity solutions:  McAfee Change Control, CimTrak, TripWire, AIDE, TrendMicro Deep Security, Verisys, and even the built-in Windows command line System File Checker (SFC)). 
+a.	If command line tools such as SFC are to be considered viable solutions, there needs to be some method to ensure they are run periodically or on system startup.
+              INFORMATION
+1.	A method to verify integrity (no changes) and authenticity (it comes from a legitimate source) when information is copied, downloaded or sent via email.  This might include: 
+a.	Digital signatures in email transmission or other file transfers
+b.	A process to check file hashes to ensure the file has not been changed (CSO does this for audit evidence)
+i.	This may also be done manually with hashing tools, but is harder to verify consistent implementation.
